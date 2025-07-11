@@ -100,7 +100,40 @@ cd frontend
 npm install
 npm start
 ```
+🌐 Live Deployment
+🔹 Frontend (Vercel)
+The React frontend is deployed on Vercel, providing a fast, global CDN and automatic builds from GitHub.
 
+URL: https://korah.vercel.app
+
+🛠️ Deployment Details:
+Framework: React (Vite)
+
+Hosted on: Vercel
+
+Auto-deploys on every push to main branch
+
+Environment variable used:
+
+ini
+Copy
+Edit
+VITE_API_URL = https://korah.onrender.com
+🔸 Backend (Render)
+The FastAPI backend is containerized and deployed on Render, which supports Dockerized Python APIs.
+
+URL: https://korah.onrender.com
+
+🛠️ Deployment Details:
+Framework: FastAPI (Python)
+
+Hosted on: Render
+
+Docker-based deployment
+
+CORS enabled to allow frontend API calls
+
+Supports Hugging Face Transformers for multilingual sentiment analysis
 ---
 
 ## 📬 Contact
