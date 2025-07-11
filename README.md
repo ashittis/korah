@@ -1,7 +1,3 @@
-Here's a rewritten and **personalized `README.md`** for your project **Korah**, replacing the previous credits and making it your own, while maintaining clarity and professionalism:
-
----
-
 # **Korah — Sentiment Analysis App**
 
 Korah is a full-stack, containerized web application that performs real-time sentiment analysis on user-input text. It uses state-of-the-art Natural Language Processing (NLP) models to determine whether the input is **positive**, **negative**, or **neutral**.
@@ -107,28 +103,10 @@ npm start
 
 ---
 
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
 ## 📬 Contact
 
 Feel free to reach out for contributions, questions, or collaborations:
 
 * 🧑‍💻 **Author**: Akash Subramanian
-* 📧 **Email**: [akashsubramanian.dev@gmail.com](mailto:akashsubramanian.dev@gmail.com)
+* 📧 **Email**: [iamakashsubramanian@gmail.com](mailto:akashsubramanian.dev@gmail.com)
 * 🌐 **GitHub**: [ashittis](https://github.com/ashittis)
-* 🎥 **Demo**: [YouTube (Unlisted)](https://youtube.com/your-korah-demo-link)
-
----
-
-Let me know if you'd like me to include:
-
-* `.env` support instructions
-* CI/CD pipeline badge
-* Screenshot placeholders
-* Or a GraphQL schema section if you plan to switch
-
-Would you like me to generate a `README.md` file you can directly paste into your repo?
