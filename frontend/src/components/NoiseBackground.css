@@ -1,0 +1,44 @@
+/* src/components/NoiseBackground.css */
+
+@property --lines {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0.00010px;
+}
+
+@keyframes liner {
+  50% {
+    --lines: 0.00012px;
+  }
+}
+
+.noise-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  --lines: 0.0001px;
+
+  mask: repeating-radial-gradient(
+    circle at center,
+    #000,
+    var(--lines),
+    #000 0,
+    #0000,
+    calc(var(--lines) * 2),
+    #0000 0
+  );
+
+  -webkit-mask: repeating-radial-gradient(
+    circle at center,
+    #000,
+    var(--lines),
+    #000 0,
+    #0000,
+    calc(var(--lines) * 2),
+    #0000 0
+  );
+
+  background-color: var(--bg-color);
+  animation: liner 6s linear infinite;
+}

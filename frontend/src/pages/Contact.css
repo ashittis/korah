@@ -1,0 +1,21 @@
+.contact {
+  padding: 2rem;
+  margin: 5rem auto;
+  max-width: 700px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'VT323', monospace;
+  border-radius: 8px;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact h2 {
+  font-size: 1.3rem;
+  margin: 1.5rem 0 0.5rem;
+}

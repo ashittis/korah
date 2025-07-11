@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+/* Animatable noise property */
+@property --lines {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0.00010px;
+}
+
+@keyframes liner {
+  50% {
+    --lines: 0.00012px;
+  }
+}
+
+:root {
+  --font: 'VT323', monospace;
+  --primary-color: #39FF33;
+  --hover-color: #fff;
+  --bg-color: #000;
+  --text-color: #39FF33;
+  --toggle-bg: #39FF33;
+  --toggle-knob: #000;
+  --input-bg: #111;
+  --border-color: #333;
+}
+
+[data-theme="light"] {
+  --primary-color: #000;
+  --hover-color: #39FF33;
+  --bg-color: #fff;
+  --text-color: #000;
+  --toggle-bg: #000;
+  --toggle-knob: #fff;
+  --input-bg: #fff;
+  --border-color: #ccc;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* 🔳 Global animated noise background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  --lines: 0.0001px;
+
+  mask: repeating-radial-gradient(
+    circle at center,
+    #000,
+    var(--lines),
+    #000 0,
+    #0000,
+    calc(var(--lines) * 2),
+    #0000 0
+  );
+
+  -webkit-mask: repeating-radial-gradient(
+    circle at center,
+    #000,
+    var(--lines),
+    #000 0,
+    #0000,
+    calc(var(--lines) * 2),
+    #0000 0
+  );
+
+  animation: liner 6s linear infinite;
+  background-color: var(--bg-color);
+}
+
+/* 🔼 Header Layout */
+.header {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-left {
+  flex: 0 0 auto;
+}
+
+/* 🎞️ Title with animated mask */
+.header-title {
+  font-size: 2rem;
+  margin: 0;
+  --lines: 0.0001px;
+
+  mask: repeating-radial-gradient(
+    circle at center,
+    #000,
+    var(--lines),
+    #000 0,
+    #0000,
+    calc(var(--lines) * 2),
+    #0000 0
+  );
+  -webkit-mask: repeating-radial-gradient(
+    circle at center,
+    #000,
+    var(--lines),
+    #000 0,
+    #0000,
+    calc(var(--lines) * 2),
+    #0000 0
+  );
+
+  animation: liner 6s linear infinite;
+}
+
+.nav-center {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-center ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-center ul li a {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+.nav-center ul li a:hover {
+  color: var(--hover-color);
+}
+
+.header-right {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* 🌗 Toggle Switch */
+.theme-switch-wrapper {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 28px;
+}
+
+.theme-switch-checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.theme-switch-label {
+  display: block;
+  background-color: var(--toggle-bg);
+  border-radius: 28px;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.theme-switch-button {
+  background-color: var(--toggle-knob);
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 24px;
+  width: 24px;
+  transition: left 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.theme-switch-checkbox:checked + .theme-switch-label .theme-switch-button {
+  left: 24px;
+}
+
+/* 📱 Mobile Navigation */
+@media (max-width: 768px) {
+  .nav-center {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-color);
+    padding: 1rem 0;
+    z-index: 999;
+  }
+
+  .nav-center.active {
+    display: flex;
+  }
+
+  .nav-center ul {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .theme-switch-wrapper {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}

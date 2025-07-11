@@ -1,0 +1,65 @@
+.analysis {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  font-family: 'VT323', monospace;
+}
+
+.analysis h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.analysis p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.sentiment textarea {
+  width: 100%;
+  max-width: 5200px; 
+  height: 200px;
+  padding: 5rem;
+  font-size: 1.2rem;
+  background-color: #111;
+  color: var(--text-color);
+  border: 1px solid #333;
+  border-radius: 5px;
+  resize: none;
+  font-family: 'VT323', monospace;
+}
+
+.analysis button {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 5px;
+  font-family: 'VT323', monospace;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.analysis button:hover {
+  background-color: var(--hover-color);
+}
+
+.result {
+  background-color: #111;
+  border: 1px solid var(--text-color);
+  padding: 1.5rem;
+  color: white;
+  border-radius: 8px;
+  margin-top: 2rem;
+  max-width: 900px; /* increased from 600px */
+}

@@ -1,0 +1,51 @@
+.history {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0rem auto;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'VT323', monospace;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.history h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.history .summary {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.history ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Result Entry Box */
+.result {
+  background-color: var(--result-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 1.2rem;
+  margin-bottom: 1.2rem;
+  color: var(--result-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.result:hover {
+  background-color: var(--result-bg-hover);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .history {
+    margin: 2rem 1rem;
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+}
