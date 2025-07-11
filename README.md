@@ -100,7 +100,7 @@ cd frontend
 npm install
 npm start
 ```
-🌐 Live Deployment
+## 🌐 Live Deployment
 🔹 Frontend (Vercel)
 The React frontend is deployed on Vercel, providing a fast, global CDN and automatic builds from GitHub.
 
@@ -133,8 +133,7 @@ Docker-based deployment
 
 CORS enabled to allow frontend API calls
 
-Supports Hugging Face Transformers for multilingual sentiment analysis
----
+Supports Hugging Face Transformers for multilingual sentiment analysis---
 
 ## 📬 Contact
 
