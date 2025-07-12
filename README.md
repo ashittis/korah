@@ -1,91 +1,90 @@
-# **Korah — Text Sentiment Prediction Engine**
+````markdown
+# Korah — Text Sentiment Prediction Engine
 
-Korah is a full-stack, containerized web application that performs real-time sentiment analysis on user-input text. It uses state-of-the-art Natural Language Processing (NLP) models to determine whether the input is **positive**, **negative**, or **neutral**.
+Korah is a full-stack, containerized web application that performs real-time sentiment analysis on user-input text. It uses state-of-the-art Natural Language Processing (NLP) models to determine whether the input is positive, negative, or neutral.
 
-The app features a **retro-themed React frontend** styled like an old-school terminal, and a **FastAPI backend** powered by **Hugging Face Transformers** for multilingual support. Docker support ensures easy deployment and reproducibility.
+The app features a retro-themed React frontend styled like an old-school terminal, and a FastAPI backend powered by Hugging Face Transformers. Docker ensures easy deployment and reproducibility.
 
-![Screenshot 1](https://github.com/ashittis/korah/blob/main/Screenshot%202025-07-11%20204114.png)
+![Screenshot 1](https://github.com/ashittis/korah/blob/main/Screenshot%202025-07-11%20204114.png)  
 ![Screenshot 2](https://github.com/ashittis/korah/blob/main/Screenshot%202025-07-11%20204217.png)
 
 ---
 
-## 🔖 Table of Contents
+## Table of Contents
 
-* [✨ Features](#-features)
-* [🚀 Usage](#-usage)
-* [🛠️ Tech Stack](#-tech-stack)
-* [📦 Installation](#-installation)
-* [📄 License](#-license)
-* [📬 Contact](#-contact)
-
----
-
-## ✨ Features
-
-* 🔤 **Multilingual Sentiment Analysis** using Hugging Face models.
-* ⚡ **Real-time predictions** with confidence scores.
-* 🧠 **Model switching** between PyTorch and TensorFlow via config flag.
-* 🖥️ **Retro CRT UI** with green-on-black terminal-style design.
-* 📈 **Local History Storage** (no login required).
-* 🐳 **Dockerized** for consistent local setup.
-* 🔁 **Planned Support** for async batching & quantization (in progress).
+- Features
+- Usage
+- Tech Stack
+- Installation
+- Live Deployment
+- License
+- Contact
 
 ---
 
-## 🚀 Usage
+## Features
 
-* Type or paste your text into the analysis box.
-* Hit **“Predict”** to get a sentiment classification.
-* View confidence score and results instantly.
-* Access history in local storage (persists across sessions).
-
----
-
-## 🛠️ Tech Stack
-
-**Frontend**
-
-* React (CRA)
-* Custom retro styling with CSS/VT323 font
-* LocalStorage for history
-* Axios for API calls
-
-**Backend**
-
-* FastAPI (Python)
-* Hugging Face Transformers (`lxyuan/distilbert-base-multilingual-cased-sentiments-student`)
-* Dynamic model loader for both TensorFlow & PyTorch
-* Dockerized with separate services
-
-**DevOps & Tools**
-
-* Docker & Docker Compose
-* GitHub Actions (optional CI setup)
-* Optional: Deployment to Vercel (Frontend) / Render/Fly.io (Backend)
+- Multilingual sentiment analysis using Hugging Face models
+- Real-time predictions with confidence scores
+- Toggle between PyTorch and TensorFlow via config flag
+- Retro CRT-style UI (green-on-black terminal)
+- Local storage for sentiment history
+- Dockerized frontend and backend
+- Future support for batching and model quantization
 
 ---
 
-## 📦 Installation (Local with Docker)
+## Usage
 
-> Prerequisite: Docker & Docker Compose installed.
+- Enter or paste text in the analysis box
+- Click "Predict" to classify sentiment
+- See results and confidence score instantly
+- History is stored locally (no login required)
+
+---
+
+## Tech Stack
+
+### Frontend
+
+- React (CRA)
+- Custom CSS with VT323 terminal font
+- Axios for API calls
+- LocalStorage for history
+
+### Backend
+
+- FastAPI (Python)
+- Hugging Face Transformers
+- Dynamic backend switch (PyTorch or TensorFlow)
+- Docker-based API
+
+### DevOps
+
+- Docker & Docker Compose
+- Optional CI with GitHub Actions
+- Optional deploy to Vercel/Render
+
+---
+
+## Installation (with Docker)
+
+Make sure Docker and Docker Compose are installed.
 
 ```bash
-# Clone the repo
 git clone https://github.com/your-username/korah.git
 cd korah
-
-# Build and run using Docker Compose
 docker compose up --build
-```
+````
 
 * Frontend: [http://localhost:3000](http://localhost:3000)
-* Backend API: [http://localhost:8000](http://localhost:8000)
+* Backend: [http://localhost:8000](http://localhost:8000)
 
 ---
 
-## 💡 Manual Setup (Optional - Without Docker)
+## Manual Setup 
 
-**Backend**
+### Backend
 
 ```bash
 cd backend
@@ -93,52 +92,37 @@ pip install -r requirements.txt
 uvicorn app:app --reload
 ```
 
-**Frontend**
+### Frontend
 
 ```bash
 cd frontend
 npm install
 npm start
 ```
-## 🌐 Live Deployment
-🔹 Frontend (Vercel)
-The React frontend is deployed on Vercel, providing a fast, global CDN and automatic builds from GitHub.
 
-URL: https://korah.vercel.app
+---
 
-🛠️ Deployment Details:
-Framework: React (Vite)
+## Live Deployment
 
-Hosted on: Vercel
+### Frontend
 
-Auto-deploys on every push to main branch
+* Hosted on Vercel
+* URL: [https://korah.vercel.app](https://korah.vercel.app)
+* Environment variable:  `VITE_API_URL=https://korah.onrender.com`
 
-Environment variable used:
+### Backend
 
-ini
-Copy
-Edit
-VITE_API_URL = https://korah.onrender.com
-🔸 Backend (Render)
-The FastAPI backend is containerized and deployed on Render, which supports Dockerized Python APIs.
+* Hosted on Render
+* URL: [https://korah.onrender.com](https://korah.onrender.com)
+* Docker-based FastAPI deployment
+* CORS enabled for frontend API calls
+---
 
-URL: https://korah.onrender.com
+## Contact
 
-🛠️ Deployment Details:
-Framework: FastAPI (Python)
+Author: Akash Subramanian
+Email: [iamakashsubramanian@gmail.com](mailto:iamakashsubramanian@gmail.com)
+GitHub: [https://github.com/ashittis](https://github.com/ashittis)
 
-Hosted on: Render
+```
 
-Docker-based deployment
-
-CORS enabled to allow frontend API calls
-
-Supports Hugging Face Transformers for multilingual sentiment analysis---
-
-## 📬 Contact
-
-Feel free to reach out for contributions, questions, or collaborations:
-
-* 🧑‍💻 **Author**: Akash Subramanian
-* 📧 **Email**: [iamakashsubramanian@gmail.com](mailto:akashsubramanian.dev@gmail.com)
-* 🌐 **GitHub**: [ashittis](https://github.com/ashittis)
