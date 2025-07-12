@@ -115,6 +115,10 @@ npm start
 * URL: [https://korah.onrender.com](https://korah.onrender.com)
 * Docker-based FastAPI deployment
 * CORS enabled for frontend API calls
+
+Demo Video
+Watch the walkthrough on YouTube: [Click Here](https://youtu.be/frahvWLxH-U)
+
 ---
 
 ## Contact
