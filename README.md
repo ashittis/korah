@@ -118,10 +118,6 @@ npm start
 ---
 
 ## Contact
-
-Author: Akash Subramanian
 Email: [iamakashsubramanian@gmail.com](mailto:iamakashsubramanian@gmail.com)
-GitHub: [https://github.com/ashittis](https://github.com/ashittis)
-
 ```
 
