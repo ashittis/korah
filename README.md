@@ -1,6 +1,6 @@
 # Korah — Text Sentiment Prediction Engine
 
-Korah is a full-stack, containerized web application that performs real-time sentiment analysis on user-input text. It uses state-of-the-art Natural Language Processing (NLP) models to determine whether the input is positive, negative, or neutral.
+Korah is a full-stack, containerized web application that performs real-time sentiment analysis on multilingual user-input text. It uses state-of-the-art Natural Language Processing (NLP) models to determine whether the input is positive, negative, or neutral.
 
 The app features a retro-themed React frontend styled like an old-school terminal, and a FastAPI backend powered by Hugging Face Transformers. Docker ensures easy deployment and reproducibility.
 
