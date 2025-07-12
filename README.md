@@ -4,7 +4,7 @@ Korah is a full-stack, containerized web application that performs real-time sen
 
 The app features a retro-themed React frontend styled like an old-school terminal, and a FastAPI backend powered by Hugging Face Transformers. Docker ensures easy deployment and reproducibility.
 
-![Screenshot 1](https://github.com/ashittis/korah/blob/main/Screenshot%202025-07-11%20204114.png)  
+![Screenshot 1](https://github.com/ashittis/korah/blob/main/Screenshot%202025-07-12%20141451.png)  
 ![Screenshot 2](https://github.com/ashittis/korah/blob/main/Screenshot%202025-07-11%20204217.png)
 
 ---
